@@ -5,7 +5,8 @@ export const MainBox = styled(Box)(({ theme }) => ({
    borderRadius: "30px",
    [theme.breakpoints.down("xs")]: {
       margin: "0 10px",
-      maxWidth: 390
+      maxWidth: 390,
+      minWidth: 'inherit',
    },
    margin: "auto",
    minWidth: 390,
