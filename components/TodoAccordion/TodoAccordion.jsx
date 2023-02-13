@@ -1,9 +1,5 @@
 import { Box } from "@mui/system";
-import {
-   Accordion,
-   AccordionSummary,
-   AccordionDetails,
-} from "@mui/material";
+import { AccordionSummary, AccordionDetails } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import TodoTask from "../TodoTask";
@@ -12,7 +8,7 @@ import { useState } from "react";
 import ModalWindow from "../ModalWindow/ModalWindow";
 import { isToday, isTomorrow } from "../../utils/utils";
 import TodoListControls from "../TodoListControls";
-import { CustomAccordion } from './TodoAccordionStyled'
+import { CustomAccordion } from "./TodoAccordionStyled";
 
 const TodoAccordion = ({ date, data, id }) => {
    const { switchComplete, setCurrentTodoListDate } = useTodoContext();
@@ -90,13 +86,13 @@ const TodoAccordion = ({ date, data, id }) => {
                ))}
                <Box
                   sx={{
-                     mt: '15px',
+                     mt: "15px",
                      display: "flex",
                      flexDirection: "row",
                      justifyContent: "flex-end",
                   }}
                >
-                  <TodoListControls handleModalOpen={handleModalOpen}/>
+                  <TodoListControls handleModalOpen={handleModalOpen} />
                </Box>
             </AccordionDetails>
          </CustomAccordion>

@@ -19,7 +19,6 @@ const DataProvider = ({ children }) => {
    }, [todos]);
 
    const [newsFeedActive, setNewsFeedActive] = useState(true);
-   console.log('News active', newsFeedActive);
    const addTodo = (title, text) => {
       let newTodos = todos.map((todo) => {
          if (todoListId === todo.id) {

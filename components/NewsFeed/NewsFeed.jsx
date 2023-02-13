@@ -22,14 +22,16 @@ const NewsFeed = () => {
    const [pageNum, setPageNum] = useState(1);
    const { isError } = useQuery(["news", pageNum], () => fetchNews(pageNum),{
     onSuccess: (data) => {
-        console.log(data)
-        setText(data.text)
+        setText(data.articles[0].title)
         const refetchData = setInterval(() => {
             setPageNum(prev => prev + 1)
-        }, 9000)
+        }, 15000)
         return () => clearInterval(refetchData)
-    }
-   });
+    },
+    refetchOnWindowFocus: false,
+    refetchOnMount: false
+   },
+   );
    return (
       <NewsBox>
          <AnimatedTypography>{isError ? 'Seems we reached news limit for today, sry buddy :(' : text}</AnimatedTypography>

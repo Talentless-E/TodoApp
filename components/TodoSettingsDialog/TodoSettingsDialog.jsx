@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Dialog, Box, Typography } from "@mui/material";
 import { CustomSwitch } from "../TodoTask/TodoTaskStyles";
 import { useTodoContext } from "../../provider/DataProvider";

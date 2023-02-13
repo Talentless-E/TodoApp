@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const NewsBox = styled(Box)(({ theme }) => ({
+export const NewsBox = styled(Box)(() => ({
     marginTop: 'auto',
     backgroundColor: "#222222",
     height: "fit-content",
@@ -16,12 +16,12 @@ export const NewsBox = styled(Box)(({ theme }) => ({
     overflow: 'hidden',
  }));
 
- export const AnimatedTypography = styled(Typography)(({ theme }) => ({
+ export const AnimatedTypography = styled(Typography)(() => ({
     color: '#f4f4f4',
     position: 'absolute',
     width: '100%',
     translate: 'translatex(100%)',
-    animation: 'moving 10s linear infinite',
+    animation: 'moving 15s linear infinite',
     '@keyframes moving': {
         '0%': {
             transform: 'translateX(100%)',

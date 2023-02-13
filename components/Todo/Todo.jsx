@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box } from "@mui/system";
-import { Typography, Button, IconButton } from "@mui/material";
+import { Typography, IconButton } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TodoAccordion from "../TodoAccordion";
 import { useTodoContext } from "../../provider/DataProvider";
@@ -23,7 +23,7 @@ const Todo = () => {
 
    const [listDay, setListDay] = useState(dayjs());
 
-   const { todos, addNewTodoList, newsFeedActive, setNewsFeedActive } =
+   const { todos, addNewTodoList } =
       useTodoContext();
 
    const sortTodoLists = (a, b) => {
