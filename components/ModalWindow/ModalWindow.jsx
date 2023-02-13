@@ -7,7 +7,6 @@ const ModalWindow = ({ modalState, setModalState, edit, setEdit }) => {
    const { deleteTodo, addTodo, editTodo, getTodoData } =
       useTodoContext();
    const data = getTodoData();
-   console.log(edit)
    const handleDelete = (e) => {
       e.preventDefault()
       deleteTodo();

@@ -72,7 +72,6 @@ const DataProvider = ({ children }) => {
 
    const switchComplete = (id) => {
       const newTodos = [...todos];
-      console.log("Switched");
       newTodos.map((todo) => {
          todo.data.map((item) => {
             if (item.id === id) {
